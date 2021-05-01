@@ -34,11 +34,25 @@ function GalleryItem (props) {
         <div>
             {/* Click hook to determine whether image or description should be rendered */}
             {click ? (
+                <img src={imageData.path} alt={imageData.description}></img>
             ) : (
                 <p>{imageData.description}</p>
-            )
             )}
         </div>
-    )
-
+        {/* Conditional rendering to render likeCounter using proper plurality */}
+        <div className="likeBox">
+            {imageData.likes === 0 ? (
+                <p>No one has loved this image yet.</p>
+            ) : imageData.likes === 1 ? (
+                <p>{imageData.likes} person loved this image!</p>
+            ) : (
+                <p>{imageData.likes} people loved this image!</p>
+            )}
+            {/* Calls likeCounter when like button is clicked */}
+            <button onClick={() => likeCounter()}>Love it!</button>
+        </div>
+      </>
+    );
 }
+
+export default GalleryItem;
