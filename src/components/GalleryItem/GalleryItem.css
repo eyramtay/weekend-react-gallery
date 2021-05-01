@@ -1,4 +1,30 @@
 .imageBox {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageBox img {
+    height: auto;
+    width: auto;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.likeBox {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+button {
+    width: 180px;
+    bottom: 220px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    justify-self: flex-end;
 }
