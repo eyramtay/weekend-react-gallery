@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import './GalleryItem.css';
+// import './GalleryItem.css';
 
 function GalleryItem (props) {
     // places imageData from props into a variable
