@@ -1,4 +1,4 @@
-import './GalleryList.css'
+// import './GalleryList.css'
 import GalleryItem from '../GalleryItem/galleryItem'
 
 function GalleryList(props) {
