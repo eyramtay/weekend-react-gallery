@@ -17,7 +17,7 @@ function GalleryItem (props) {
         console.log('Click', imageData.id);
         axios({
             method: 'PUT',
-            url: '/gallery/like/${imageData.id}',
+            url: `/gallery/like/${imageData.id}`,
         })
         .then((response) => {
             console.log('Increased likes for image', response);
@@ -31,7 +31,7 @@ function GalleryItem (props) {
     return (
         <>
         {/* div to load images or description */}
-        <div>
+        <div className="imageBox" onClick={() => toggle()}>
             {/* Click hook to determine whether image or description should be rendered */}
             {click ? (
                 <img src={imageData.path} alt={imageData.description}></img>
